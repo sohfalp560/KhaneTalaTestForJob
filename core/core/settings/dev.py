@@ -6,8 +6,8 @@ SECRET_KEY = "environ.get('SECRET_KEY')"  # this line should be changed on produ
 WEBSITE_URL = "localhost"
 
 # Applications
-INSTALLED_APPS += ['silk']
-MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
+INSTALLED_APPS += ["silk"]
+MIDDLEWARE += ["silk.middleware.SilkyMiddleware"]
 
 # Database
 DATABASES = {
