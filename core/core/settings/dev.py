@@ -7,8 +7,9 @@ WSGI_APPLICATION = "core.wsgi.application"
 WEBSITE_URL = "localhost"
 
 # Applications
-INSTALLED_APPS.append('silk.middleware.SilkyMiddleware')
-MIDDLEWARE.append('silk.middleware.SilkyMiddleware')
+INSTALLED_APPS += ['silk']
+MIDDLEWARE += ['silk.middleware.SilkyMiddleware']
+
 # Database
 DATABASES = {
     "default": {
