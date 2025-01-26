@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     ## the lib apps
     "django_extensions", # added due to some tools for easier development and plus commands.
     ## the project base apps
+    "trade",
 ]
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
