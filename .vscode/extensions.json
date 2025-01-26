@@ -1,0 +1,17 @@
+{
+	"recommendations": [
+		"batisteo.vscode-django",
+		"njpwerner.autodocstring",
+		"tkcandrade.code-annotation",
+		"charliermarsh.ruff"
+	],
+	"unwantedRecommendations": [
+		"ms-python.python",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"ms-python.debugpy",
+		"ms-python.vscode-pylance",
+		"ms-python.vscode-pylint",
+		"ms-python.python-language-server",
+		"ms-azuretools.vscode-docker",
+	]
+}

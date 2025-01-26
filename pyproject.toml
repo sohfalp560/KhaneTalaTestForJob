@@ -1,0 +1,31 @@
+[project]
+name = "FE_khaneTala"
+version = "0.0.5"
+license = { file = "LICENSE" }
+description = "Developing and testing Gold Trade Management API project using Django and Django REST Framework (DRF)."
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    { name = "Soheyl_Fesahati", email = "sohfalp560@gmail.com" },
+]
+requires-python = ">=3.12"
+dependencies = [
+    "django>=5.1.5",
+    "django-extensions>=3.2.3",
+    "django-silk>=5.3.2",
+    "djangorestframework>=3.15.2",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.9.3",
+]
+
+
+# other tools
+[tool.ruff]
+line-length = 120
+[tool.ruff.lint]
+ignore = ["F403","F405"]
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
