@@ -4,7 +4,7 @@ from .models import User, Transaction
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
-    list_display = ("username", "balance_rial", "balance_gold")
+    pass
 
 
 @admin.register(Transaction)

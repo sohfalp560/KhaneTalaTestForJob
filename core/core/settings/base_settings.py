@@ -20,6 +20,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",  # added due to pass some data to more humanized
     ## the lib apps
+    "rest_framework",  # rest_framework for making an api (rest) calls.
     "django_extensions",  # added due to some tools for easier development and plus commands.
     ## the project base apps
     "trade",
