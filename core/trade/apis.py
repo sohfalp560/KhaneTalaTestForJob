@@ -1,7 +1,7 @@
 from rest_framework import generics
 from rest_framework.exceptions import ValidationError
-from .models import User
-from .serializers import BuyTransactionSerializer, SellTransactionSerializer
+from .models import User, Transaction
+from .serializers import BuyTransactionSerializer, SellTransactionSerializer, TransactionSerializer
 
 PRICE_PER_GRAM = 10, 000, 000  # 10,000,000 Rial per gram as document said in different JSONs
 
@@ -66,3 +66,11 @@ class SellTransactionAPIView(generics.CreateAPIView):
             price_per_gram=PRICE_PER_GRAM,
             status='completed'
         )
+
+
+class TransactionHistoryAPIView(generics.ListAPIView):
+    serializer_class = TransactionSerializer
+
+    def get_queryset(self):
+        user_id = self.kwargs['user_id']
+        return Transaction.objects.filter(user_id=user_id)

@@ -27,3 +27,9 @@ class SellTransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transaction
         fields = ['user_id', 'gold_weight_gram']
+
+class TransactionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Transaction
+        fields = '__all__'
+        read_only_fields = ('user', 'price_per_gram', 'status', 'date')
