@@ -14,3 +14,16 @@ class BuyTransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Transaction
         fields = ["user_id", "amount_rial"]
+
+class SellTransactionSerializer(serializers.ModelSerializer):
+    """serializer for endpoint2: sell transaction
+
+    Additional Fields:
+        user_id: int: because it was in the document.
+    """
+    user_id = serializers.IntegerField()
+    gold_weight_gram = serializers.FloatField(min_value=0.001)
+
+    class Meta:
+        model = Transaction
+        fields = ['user_id', 'gold_weight_gram']
