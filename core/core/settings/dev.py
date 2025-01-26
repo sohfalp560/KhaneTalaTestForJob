@@ -3,7 +3,6 @@ from .base_settings import *
 
 DEBUG = True
 SECRET_KEY = "environ.get('SECRET_KEY')"  # this line should be changed on production
-WSGI_APPLICATION = "core.wsgi.application"
 WEBSITE_URL = "localhost"
 
 # Applications
