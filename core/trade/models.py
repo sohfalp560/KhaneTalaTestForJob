@@ -3,6 +3,12 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
+    """Create custom user account system with AbstractUser from djnago 
+
+    Additional Fields:
+        balance_Rial: positive_integer: as balance of user in Rial (cash) as I write default value is 100 Toman.
+        balance_gold: decimal: as balance of user in gold (gram) from 0.001 to 1,000,000,000
+    """
     balance_Rial = models.PositiveIntegerField(
         default=1000000,
     )
@@ -10,6 +16,16 @@ class User(AbstractUser):
 
 
 class Transaction(models.Model):
+    """Transaction Model for saving in database.
+
+    Fields:
+        user: Foreign_key: relating user with this model.
+        type: char: choices from TypeOfTX as Buy, Sell
+        amount_rial: int: cash to pay or give in Rial
+        gold_weight_gram: decimal: gold gram to pay or equal to cash (Rial)
+        price_per_gram: positive_integer: price of gold Rial/Gram.
+        status: char: choices for transaction state: is it pending? or completed? or unfortunately gives error?
+    """
     class Status(models.TextChoices):
         PENDING = "pn", "on Pending"
         COMPLETED = "cm", "Completed!"
